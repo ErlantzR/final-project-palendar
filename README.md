@@ -46,7 +46,7 @@ You also have a choice of who you would like to include in the shared calendar, 
 
 ## Card wall
 
-< INSERT TRELLO BOARD IMAGE LATER >
+![Trello board](/client/public/images/README/trello.png)
 
 ## MVP, design and planning
 
@@ -91,11 +91,26 @@ You also have a choice of who you would like to include in the shared calendar, 
 
 ## Demo Photos
 
-< INSERT DEMO PHOTOS AND VIDEO >
+### Home/login page
+![home/login](/client/public/images/README/home_login.png)
+
+### Sign up page
+![signup](/client/public/images/README/signup.png)
+
+### Personal Calendar
+![personal_calendar](/client/public/images/README/personal_calendar.png)
+
+### Update appointment
+![update_appointment](/client/public/images/README/update_appointment.png)
+
+### Group Events
+![group_calendar](/client/public/images/README/group_calendar.png)
 
 ## Future Improvements
 
-< MAKE THIS APP >
+- Add information for other external APIs, like information about movies,...
+- Making a "suggestions" section where the app will suggest activities for a certain date or month (using external API, for example)
+- Implement "friends" feature, so only your friends appear on the group events
 
 ## How to Run Locally
 
@@ -107,6 +122,7 @@ You also have a choice of who you would like to include in the shared calendar, 
    npm install
    ```
 5. Install an ESLint plugin for your editor. For example: [linter-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) for vscode.
+6. Create .env file in backend folder, including variables PORT (port number for backend to run. SHould be set to 8282) and MONGO_URI (mongo db url). Include also a MONGO_URI_TEST (mongo db url) if running backend tests
 
 ### Start Server
 
