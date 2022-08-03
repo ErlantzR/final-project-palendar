@@ -12,20 +12,24 @@ function Login() {
 
   async function loginUser(event) {
     event.preventDefault();
-    const response = await axios.post('http://localhost:8282/users/login', {
-      email,
-      password,
-    });
+    try{
+      const response = await axios.post('http://localhost:8282/users/login', {
+        email,
+        password,
+      });
 
-    if (response.data.user) {
-      localStorage.setItem('token', response.data.user);
-      navigate('/home');
-    } else {
+      if (response.data.user) {
+        localStorage.setItem('token', response.data.user);
+        navigate('/home');
+      } else {
+        setError('Please check your username and password.');
+      }
+
+      setEmail('');
+      setPassword('');
+    }catch {
       setError('Please check your username and password.');
     }
-
-    setEmail('');
-    setPassword('');
   }
 
   return (
